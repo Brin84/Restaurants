@@ -4,12 +4,12 @@ from parsers.parser import parse_restaurants, save_to_md
 from parsers.final_parsing import parse_restaurant_info
 
 
-BASE_DIR = Path("D:/Python/RestaurantGuru")
+BASE_DIR = Path("D:/RestaurantGuru")
 PRE_DATA_DIR = BASE_DIR / "pre_data"
 OUTPUT_DIR = BASE_DIR / "output_files"
 
-MD_FILE_PATH = PRE_DATA_DIR / "restaurants_vitebsk.md"
-OUTPUT_FILE_PATH = OUTPUT_DIR / "data_Vitebsk.md"
+MD_FILE_PATH = PRE_DATA_DIR / "restaurants_city.md"
+OUTPUT_FILE_PATH = OUTPUT_DIR / "data.md"
 
 async def run():
     print("🚀 Запуск парсинга ресторанов...")

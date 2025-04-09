@@ -65,7 +65,7 @@ def save_restaurant_info_to_md(output_file_path, restaurant_info):
     """
 
     with open(output_file_path, "w", encoding="utf-8") as file:
-        file.write("# Информация о ресторанах Витебска\n\n")
+        file.write("# Информация о ресторанах:\n\n")
         for line in restaurant_info:
             file.write(f"{line}\n")
 

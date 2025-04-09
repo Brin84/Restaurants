@@ -27,7 +27,7 @@ def parse_restaurants():
     """Парсит список ресторанов (название, ID, ссылка) и возвращает данные в виде списка словарей."""
 
     driver = setup_driver()
-    url = 'https://restaurantguru.ru/Viciebsk'
+    url = 'https://restaurantguru.ru/Kalinkavichy'
     driver.get(url)
     time.sleep(7)
 
@@ -63,7 +63,7 @@ def parse_restaurants():
     return restaurants
 
 
-def save_to_md(data, output_dir=None, output_file="restaurants_vitebsk.md"):
+def save_to_md(data, output_dir=None, output_file="restaurants_city.md"):
     """Сохраняет список ресторанов в Md в указанную директорию."""
 
     if not data:
@@ -77,7 +77,7 @@ def save_to_md(data, output_dir=None, output_file="restaurants_vitebsk.md"):
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     with output_path.open('w', encoding='utf-8') as file:
-        file.write("# 📌 Список ресторанов Витебска\n\n")
+        file.write("# 📌 Список ресторанов:\n\n")
         file.write("| №  | Название | ID | Ссылка |\n")
         file.write("|----|----------|----|--------|\n")
 
